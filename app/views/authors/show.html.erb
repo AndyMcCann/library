@@ -4,6 +4,7 @@
 
 <p>Author Name:
 <%=@author.author_name%>
+<%=link_to "Author Details", author_details_path(@author)%>
 </p>
 
 <% @books.each do |book| %>

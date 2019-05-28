@@ -1,14 +1,14 @@
 <h1> Please Log In <h2>
 
-<%form_with scope: :user, url: homepage_index_path, local: true do |form| %> 
+<%=form_with scope: :user, url: homepage_index_path, local: true do |form| %> 
     <p>
         <%=form.label :email%> <br>
-        <%= form.email :email%>
+        <%= form.email_field :email%><br>
 
         <%=form.label :password%> <br>
-        <%=form.password :password%>
+        <%=form.password_field :password%><br>
 
-        <%= form.submit %>
+        <%= form.submit "Log In"%>
 
 
     </p>

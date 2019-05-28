@@ -1,0 +1,24 @@
+<h1> Author Homepage </h1>
+
+<%= render "shared/homepagelink"%>
+<%= link_to '<button type ="button">New Author</button>'.html_safe, new_author_path%>
+
+<p> List of Authors </p>
+
+<% @authors.each do |author| %>
+   <p> <%=  author.author_name %> 
+   
+
+   </p>
+   <p>
+   <%= link_to 'Edit', edit_author_path(author) %>
+   <%= link_to 'Show', author_path(author) %>
+   <%= link_to 'Delete', author_path(author), 
+        method: :delete, 
+        data: {confirm: 'Are you sure?'}%>
+   </p>
+<% end %>
+    
+   
+
+   

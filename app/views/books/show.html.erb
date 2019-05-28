@@ -1,0 +1,16 @@
+
+<%= render "shared/homepagelink"%>
+<%= link_to '<button type="button">Edit</button>'.html_safe, edit_book_path %>
+
+
+<p>Book Title:
+<%= @book.book_title%>
+</p>
+
+<p>Author:
+<%= @book.author.author_name%>
+</p>
+
+<p>Genre:
+<%= @book.genre.genre_name%>
+</p>

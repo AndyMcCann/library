@@ -1,0 +1,21 @@
+<h1> Add a new Book </h1>
+
+<%= render "shared/homepagelink"%>
+
+<%= form_with scope: :book, url: books_path, local: true do |form|%>
+    <p>
+        <%=form.label :book_title%><br>
+        <%=form.text_field :book_title%><br>
+
+        <%=form.label :author_id%><br>
+        <%=collection_select(:book, :author_id, @authors, :id, :author_name, {:prompt => false}) %><br>
+
+        <%=form.label :genre_id%><br>
+        <%=collection_select(:book, :genre_id, @genres, :id, :genre_name, {:prompt => false})%><br>
+    </p>
+
+    <p>
+    <%=form.submit%>
+    </p>
+<% end %>
+
